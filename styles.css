@@ -1,0 +1,137 @@
+:root{
+  --bg:#f4f7fb;
+  --card:#ffffff;
+  --accent:#2b6cb0;
+  --muted:#6b7280;
+}
+*{box-sizing:border-box}
+body{
+  font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  background: linear-gradient(180deg,var(--bg), #eef2f7);
+  margin:0;
+  min-height:100vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:2rem;
+}
+.app{
+  width:100%;
+  max-width:520px;
+  background:var(--card);
+  padding:1.25rem;
+  border-radius:12px;
+  box-shadow:0 6px 20px rgba(30,41,59,0.08);
+}
+h1{
+  margin:0 0 0.75rem 0;
+  font-size:1.5rem;
+  color:#0f172a;
+}
+.input-area{
+  display:flex;
+  gap:0.5rem;
+  margin-bottom:1rem;
+}
+.input-area input{
+  flex:1;
+  padding:0.6rem 0.75rem;
+  border:1px solid #e6eef8;
+  border-radius:8px;
+  font-size:1rem;
+  outline:none;
+}
+.input-area input:focus{
+  box-shadow:0 0 0 3px rgba(66,153,225,0.12);
+  border-color:var(--accent);
+}
+.input-area button{
+  padding:0 1rem;
+  border:none;
+  background:var(--accent);
+  color:#fff;
+  border-radius:8px;
+  cursor:pointer;
+  font-weight:600;
+}
+.todo-list{
+  list-style:none;
+  padding:0;
+  margin:0;
+  display:flex;
+  flex-direction:column;
+  gap:0.5rem;
+}
+.todo-item{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:0.6rem;
+  border-radius:8px;
+  border:1px solid #eef2f6;
+  background:linear-gradient(180deg,#fff,#fbfdff);
+}
+.todo-left{
+  display:flex;
+  gap:0.75rem;
+  align-items:center;
+  flex:1;
+}
+.check{
+  width:20px;
+  height:20px;
+  border-radius:6px;
+  border:2px solid #cbd5e1;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  cursor:pointer;
+}
+.check.checked{
+  background:var(--accent);
+  border-color:var(--accent);
+  color:white;
+}
+.todo-text{
+  font-size:0.98rem;
+  color:#0f172a;
+  word-break:break-word;
+}
+.todo-text.completed{
+  text-decoration:line-through;
+  color:var(--muted);
+  opacity:0.8;
+}
+.controls{
+  display:flex;
+  gap:0.5rem;
+  margin-left:1rem;
+}
+.control-btn{
+  border:none;
+  background:transparent;
+  cursor:pointer;
+  padding:0.25rem 0.5rem;
+  border-radius:6px;
+}
+.control-btn:hover{ background:#f1f5f9 }
+.empty{
+  text-align:center;
+  color:var(--muted);
+  padding:1rem 0;
+}
+.footer{
+  margin-top:1rem;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  color:var(--muted);
+  font-size:0.95rem;
+}
+#clear-completed{
+  background:transparent;
+  border:1px solid #e6eef8;
+  padding:0.35rem 0.6rem;
+  border-radius:8px;
+  cursor:pointer;
+}
